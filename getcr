@@ -1,0 +1,8 @@
+rm -rf /tmp/chrome_nightly_staging && \
+mkdir /tmp/chrome_nightly_staging && \
+cd /tmp/chrome_nightly_staging && \
+curl 'http://build.chromium.org/f/chromium/continuous/mac/LATEST/chrome-mac.zip' -o chrome_nightly.zip && \
+unzip chrome_nightly.zip && \
+rm -rf ~/chrome-mac.bak && \
+mv ~/chrome-mac ~/chrome-mac.bak &&
+mv ./chrome-mac ~/chrome-mac
